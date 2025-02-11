@@ -1,0 +1,149 @@
+/* Specific login form styles */
+.auth-login-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-login-form {
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.auth-error-message {
+    color: #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    color: #333;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.auth-form-input::placeholder {
+    color: #999;
+}
+
+.auth-login-button {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-login-button:hover {
+    background: #333;
+}
+
+.auth-forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-forgot-password-link {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* Modal styles */
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.auth-modal {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.auth-modal h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.auth-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.auth-forgot-password-form {
+    margin-top: 20px;
+}
+
+.auth-forgot-password-form p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.auth-modal-message {
+    color: #28a745;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-submit-button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.auth-submit-button:hover {
+    background: #218838;
+}
+
+@media (max-width: 600px) {
+    .auth-login-form-container{
+        padding: 0;
+    }
+}

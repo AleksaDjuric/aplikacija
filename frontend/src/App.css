@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content {
+  padding: 20px;
+  flex-grow: 1;
+  margin-left: 245px;
+}
+
+nav {
+  background-color: black;
+  padding: 20px;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+nav ul li button {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,0,229,1) 41%, rgba(0,212,255,1) 100%);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 80%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.close-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+h1 {
+  padding: 20px;
+  color: #333;
+  display: inline;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Add these styles to your App.css */
+.rack-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.rack-modal-content {
+  position: relative;
+  background-color: #6b7280;
+  width: 800px;
+  height: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rack-sides-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.rack-side {
+  width: 300px; /* Updated from 100px */
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px; /* This adds space between the rack sides */
+}
+.rack-unit {
+  height: 16px;
+  border-bottom: 1px solid rgba(238, 229, 229, 0.993);
+}
+
+/* Remove general form styles to avoid conflicts */
+/* Remove general input styles to avoid conflicts */
+/* Remove general button styles to avoid conflicts */
+
+/* Styles for the logout button */
+.logout-button {
+  background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,0,229,1) 41%, rgba(0,212,255,1) 100%);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Login page container */
+.app-login-wrapper {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:  300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2), 0px 16px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card.active {
+  background-color: #007BFF;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 123, 255, 0.3), 0px 16px 24px rgba(0, 123, 255, 0.5);
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: inherit;
+}
+
+.useri{
+  margin-left: 100px;
+}
+
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    flex-grow: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  nav.mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  nav.mobile.active {
+    transform: translateX(0);
+  }
+
+  .close-button {
+    display: block;
+  }
+}
